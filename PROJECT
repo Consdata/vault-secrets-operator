@@ -1,0 +1,16 @@
+domain: consdata.com
+layout:
+- go.kubebuilder.io/v3
+projectName: vault-secrets-operator
+repo: github.com/Consdata/vault-secrets-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: consdata.com
+  group: consdata.com
+  kind: VaultSecret
+  path: github.com/Consdata/vault-secrets-operator/api/v1
+  version: v1
+version: "3"
