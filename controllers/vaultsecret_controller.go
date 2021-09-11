@@ -47,8 +47,8 @@ type VaultSecretReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.8.3/pkg/reconcile
 func (r *VaultSecretReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
-	_ = log.FromContext(ctx)
-
+	log := log.FromContext(ctx)
+	log.Info("Test")
 	// your logic here
 
 	return ctrl.Result{}, nil

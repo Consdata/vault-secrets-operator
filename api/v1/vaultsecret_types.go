@@ -25,17 +25,15 @@ import (
 
 // VaultSecretSpec defines the desired state of VaultSecret
 type VaultSecretSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of VaultSecret. Edit vaultsecret_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Path  string `json:"path"`
+	Vault string `json:"vault"`
+	Role  string `json:"role"`
+	Name  string `json:"name"`
+	Type  string `json:"type"`
 }
 
 // VaultSecretStatus defines the observed state of VaultSecret
 type VaultSecretStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
 }
 
 //+kubebuilder:object:root=true
