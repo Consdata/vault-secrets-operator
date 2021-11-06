@@ -18,21 +18,24 @@ spec:
         openAPIV3Schema:
           type: object
           properties:
-            name:
-              type: string
-              description: "Name of the secret"
-            path:
-              type: string
-              description: "Secret path in vault"
-            vault:
-              type: string
-              description: "Vault addr"
-            role:
-              type: string
-              description: "Vault role"
-            type:
-              type: string
-              description: "Secret type"
+            spec:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: "Name of the secret"
+                path:
+                  type: string
+                  description: "Secret path in vault"
+                vault:
+                  type: string
+                  description: "Vault addr"
+                role:
+                  type: string
+                  description: "Vault role"
+                type:
+                  type: string
+                  description: "Secret type"
 
 ---
 kind: ClusterRole
